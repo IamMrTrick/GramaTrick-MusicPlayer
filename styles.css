@@ -1,7 +1,7 @@
 body {
     background: #13181F;
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +23,14 @@ img {
     justify-content: center;
 }
 
+.gtmp-music {
+    display: none;
+}
+
 .gtmp-grama {
     position: relative;
     text-align: center;
+    cursor: pointer;
 }
 
 img.gtmp-player-ico {
@@ -39,6 +44,10 @@ img.gtmp-player-ico {
 
 img.gtmp-player-ico.gtmp-play-mode {
     transform: scale(0.85) rotate(360deg);
+}
+
+img.gtmp-disk-ico {
+    animation-play-state: paused;
 }
 
 .gtmp-buttons {
@@ -59,11 +68,19 @@ img.gtmp-player-ico.gtmp-play-mode {
     align-items: center;
     text-align: center;
     margin: 0 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.gtmp-buttons div:hover {
+    background: rgba(255,255,255,0.1);
 }
 
 .gtmp-speed, .gtmp-vlum {
     width: 1.2rem;
     height: 1.2rem;
+}
+.gtmp-speed-rate {
+    font-size: 0.75rem;
 }
 
 .gtmp-play img {
@@ -92,9 +109,10 @@ img.gtmp-player-ico.gtmp-play-mode {
     appearance: none;
     opacity: 0.8;
     transition: 0.3s;
-    background: linear-gradient(to left,rgba(255, 255, 255, 0.5) 50%, white 50%);
+    background: linear-gradient(to left,rgba(255, 255, 255, 0.5) 100%, white 100%);
     border-radius: 10rem;
     margin-bottom: 0.5rem;
+    cursor: pointer;
 }
 .gtmp-time-slider:hover {
     opacity: 1;
@@ -105,9 +123,6 @@ img.gtmp-player-ico.gtmp-play-mode {
     appearance: none;
     width: 25px;
     height: 25px;
-    border-radius: 10rem;
-    background: #ffffff;
-    cursor: pointer;
 }
   
 .gtmp-time-slider::-moz-range-thumb {
@@ -118,4 +133,31 @@ img.gtmp-player-ico.gtmp-play-mode {
     border-radius: 10rem;
     background: #ffffff;
     cursor: pointer;
+}
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+
+.gtmp-rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    animation-play-state: running!important;
 }

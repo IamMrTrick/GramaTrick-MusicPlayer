@@ -10,6 +10,8 @@
 <body>
     <!-- GTMP PLAYER -->
     <div class="gtmp-container"> 
+
+        <audio src="files/Baraye -Shervin Hajipour [loudmusic.ir]-320.mp3" class="gtmp-music"> Your Browser Not Support Music Player! </audio>
         <!-- Gramaphone visual icons and animation -->
         <div class="gtmp-grama">
             <img src="icons/disk.svg" alt="" class="gtmp-disk-ico">
@@ -19,7 +21,7 @@
         <div class="gtmp-buttons">
             <!-- Volume Button -->
             <div class="gtmp-vlum">
-                <img src="icons/Vlm-Cross.svg" alt="" class="gtmp-vlum-ico">
+                <img src="icons/Vlm-High.svg" alt="" class="gtmp-vlum-ico">
             </div>
 
             <div class="gtmp-play">
@@ -33,9 +35,13 @@
         </div>
 
         <div class="gtmp-progress-time">
-            <input type="range" name="gtmp-slider" class="gtmp-time-slider" id="#slider-gtmp">
+            <input type="range" value="0" name="gtmp-slider" class="gtmp-time-slider" id="#slider-gtmp">
             <div class="gtmp-time-txt"> 00:00/00:00 </div>
         </div>
     </div>
+
+    <!-- Music Player Script -->
+    <script src="script.js"></script>
+
 </body>
 </html>
