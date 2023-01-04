@@ -1,0 +1,121 @@
+body {
+    background: #13181F;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+}
+
+/* GTMP */
+.gtmp-container {
+    background: #5061FF;
+    position: relative;
+    border: 1px solid #29313A;
+    box-shadow: 0px 7px 29px rgba(17, 12, 46, 0.15);
+    border-radius: 25px;
+    padding: 1.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gtmp-grama {
+    position: relative;
+    text-align: center;
+}
+
+img.gtmp-player-ico {
+    position: absolute;
+    left: -1rem;
+    bottom: 1.5rem;
+    transform: scale(0.85) rotate(335deg);
+    transform-origin: 100% 100%;
+    transition: 0.4s;
+}
+
+img.gtmp-player-ico.gtmp-play-mode {
+    transform: scale(0.85) rotate(360deg);
+}
+
+.gtmp-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.gtmp-buttons div {
+    padding: 0.5rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 0.25rem;
+}
+
+.gtmp-speed, .gtmp-vlum {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.gtmp-play img {
+    width: 100%;
+}
+
+.gtmp-play {
+    width: 2rem;
+    height: 2rem;
+}
+
+.gtmp-progress-time {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gtmp-time-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0.8;
+    transition: 0.3s;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0.5) 50%, white 50%);
+    border-radius: 10rem;
+    margin-bottom: 0.5rem;
+}
+.gtmp-time-slider:hover {
+    opacity: 1;
+}
+
+.gtmp-time-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 10rem;
+    background: #ffffff;
+    cursor: pointer;
+}
+  
+.gtmp-time-slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 10rem;
+    background: #ffffff;
+    cursor: pointer;
+}

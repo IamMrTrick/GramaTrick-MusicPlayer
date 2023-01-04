@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>GramaTrick MusicPlayer</title>
 </head>
 <body>
-    <div class="gtmp-container">
-        
+    <!-- GTMP PLAYER -->
+    <div class="gtmp-container"> 
+        <!-- Gramaphone visual icons and animation -->
+        <div class="gtmp-grama">
+            <img src="icons/disk.svg" alt="" class="gtmp-disk-ico">
+            <img src="icons/player.svg" alt="" class="gtmp-player-ico">
+        </div>
+
+        <div class="gtmp-buttons">
+            <!-- Volume Button -->
+            <div class="gtmp-vlum">
+                <img src="icons/Vlm-Cross.svg" alt="" class="gtmp-vlum-ico">
+            </div>
+
+            <div class="gtmp-play">
+                <img src="icons/play.svg" alt="" class="gtmp-play-ico">
+            </div>
+
+            <div class="gtmp-speed">
+                <span class="gtmp-speed-rate">1x</span>
+            </div>
+            
+        </div>
+
+        <div class="gtmp-progress-time">
+            <input type="range" name="gtmp-slider" class="gtmp-time-slider" id="#slider-gtmp">
+            <div class="gtmp-time-txt"> 00:00/00:00 </div>
+        </div>
     </div>
 </body>
 </html>
